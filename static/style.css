@@ -1,0 +1,20 @@
+body{
+    /* background-color: #1E2D38 ; */
+}
+
+.board{
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+td{
+    background-color: blanchedalmond;
+    padding: 10px;
+    border:  white;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
