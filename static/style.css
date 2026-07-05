@@ -1,20 +1,58 @@
 body{
-    /* background-color: #1E2D38 ; */
+    background-color: #1b2a33 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .board{
     border-collapse: separate;
     border-spacing: 10px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
-
-td{
-    background-color: blanchedalmond;
+.top-logo{
+    height: 15px;
+}
+.block{
+    background-color: #253943;
     padding: 10px;
     border:  white;
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     border-radius: 10px;
     align-items: center;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.block:hover{
+    background-color: #304551;
+}
+
+.refresh-icon{
+    height: 15px;
+    justify-content: right;
+}
+
+.score-card-x{
+    background-color: #2fd8c9;
+    height: 50px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.score-card-ties{
+    background-color: #dfe8ea;
+    height: 60px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.score-card-o{
+    background-color: #f0b429;
+    height: 60px;
+    width: 80px;
+    border-radius: 10px;
 }
