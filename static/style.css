@@ -1,6 +1,63 @@
 body{
     background-color: #1b2a33 ;
+    color: antiquewhite;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    justify-content:center;
+    align-items: center;
+}
+
+div{
+    border-color: bisque;
+}
+.game{
+    width: 320px;
+    padding: 24px 0;
+}
+
+.score_logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.logo{
+    height: 20px;
+}
+
+.board{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row{
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cell{
+    height: 80px;
+    width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.scoreboard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    padding: 10px 6px 12px;
+    text-align: center;
+}
+
+.board,.scoreboard{
+    display: flex;
 }
