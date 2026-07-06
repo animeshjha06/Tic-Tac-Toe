@@ -11,47 +11,49 @@
 <body>
     <div class="game">
         <div  class="score_logo">
-            <div>
+            <div class="legend">
                 <img class="logo" src="/static/images/cross.png" alt="">
                 <img class="logo" src="/static/images/circle.png" alt="">
             </div>
-            <div>
-                <span>*</span>
-                <span>Turn</span>
+            <div class="turn_indicator">
+                <span class="">
+                    <img class="turn_sign" src="/static/images/cross.png" alt="">
+                </span>
+                <span class="turn">TURN</span>
             </div>
-            <button></button>
+            <button class="reset_button">⟳</button>
         </div>
 
         <div class="board"> 
             <div class="row">
-                <div class="cell">1</div>
-                <div class="cell">2</div>
-                <div class="cell">3</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
             </div>
             <div class="row">
-                <div class="cell">4</div>
-                <div class="cell">5</div>
-                <div class="cell">6</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
             </div>
             <div class="row">
-                <div class="cell">7</div>
-                <div class="cell">8</div>
-                <div class="cell">9</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
             </div>
         </div>
 
         <div class="scoreboard">
-            <div>
+            <div class="scorecard_x">
                 <div>Player 1</div>
                 <div>0</div>
             </div>
-            <div>
+            <div class="scorecard_tie">
                 <div>Ties</div>
                 <div>0</div>
             </div>
-            <div>
+            <div class="scorecard_o">
                 <div>Player 2</div>
-                <div>Ties</div>
+                <div>0</div>
             </div>
         </div>
     </div>

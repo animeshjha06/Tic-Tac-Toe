@@ -1,16 +1,13 @@
 body{
     background-color: #1b2a33 ;
-    color: antiquewhite;
     display: flex;
     min-height: 100vh;
     margin: 0;
     justify-content:center;
     align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-div{
-    border-color: bisque;
-}
 .game{
     width: 320px;
     padding: 24px 0;
@@ -21,10 +18,42 @@ div{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 14px;
+
 }
 
+.turn_indicator{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #22333d;
+    color: rgb(252, 248, 248);
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.reset_button{
+    background: #22333d;
+    border: none;
+    color: rgb(252, 248, 248);
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .logo{
     height: 20px;
+}
+
+.turn_sign{
+    width: 10px;
+    height: 10px;
 }
 
 .board{
@@ -39,14 +68,18 @@ div{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 5px 0px ;
 }
 
 .cell{
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #22333d;;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .scoreboard{
@@ -54,10 +87,42 @@ div{
     align-items: center;
     justify-content: space-between;
     border-radius: 12px;
-    padding: 10px 6px 12px;
     text-align: center;
+    margin: 10px 0px;
 }
 
-.board,.scoreboard{
-    display: flex;
+.scorecard_x{
+    background-color: #2fd8c9;
+    height: 70px;
+    width: 100px;
+    color : #1b2a33;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.scorecard_tie{
+    background-color: #dfe8ea;
+    height: 70px;
+    width: 100px;
+    color : #1b2a33;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.scorecard_o{
+    background-color: #f0b429;
+    height: 70px;
+    width: 100px;
+    color : #1b2a33;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    font-size: 15px;
+    font-weight: 700;
 }
