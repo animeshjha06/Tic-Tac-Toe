@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="icon" href="/static/images/tic-tac-toe.png" type="image/png">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <div class="game">
+        <div  class="score_logo">
+            <div class="legend">
+                <img class="logo" src="/static/images/cross.png" alt="">
+                <img class="logo" src="/static/images/circle.png" alt="">
+            </div>
+            <div class="turn_indicator">
+                <span class="">
+                    <img class="turn_sign" src="/static/images/cross.png" alt="">
+                </span>
+                <span class="turn">TURN</span>
+            </div>
+            <button class="reset_button">⟳</button>
+        </div>
+
+        <div class="status-msg" id="statusMsg"></div>
+
+        <div class="board"> 
+            <div class="row">
+                <div class="cell" id="1"></div>
+                <div class="cell" id="2"></div>
+                <div class="cell" id="3"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="4"></div>
+                <div class="cell" id="5"></div>
+                <div class="cell" id="6"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="7"></div>
+                <div class="cell" id="8"></div>
+                <div class="cell" id="9"></div>
+            </div>
+        </div>
+
+        <div class="scoreboard">
+            <div class="scorecard_x">
+                <div class="x_name">Player 1</div>
+                <div class = "x_score">0</div>
+            </div>
+            <div class="scorecard_tie">
+                <div>Ties</div>
+                <div class = "tie_score">0</div>
+            </div>
+            <div class="scorecard_o">
+                <div class="o_name">Player 2</div>
+                <div class = "o_score">0</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
