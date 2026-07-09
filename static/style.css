@@ -9,7 +9,7 @@ body{
 }
 
 .game{
-    width: 320px;
+    width: min(90vw, 360px);
     padding: 24px 0;
 }
 
@@ -17,25 +17,25 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 14px;
-
+    margin-bottom: 12px;
 }
 
 .turn_indicator{
     display: flex;
     align-items: center;
     gap: 6px;
-    background: #22333d;
+    background: #2f434e;
     color: rgb(252, 248, 248);
     padding: 8px 16px;
     border-radius: 10px;
     font-weight: 700;
     font-size: 13px;
     letter-spacing: 0.5px;
+    box-shadow: 0.5px 0.5px 0.2px rgba(0, 0, 0, 0.345);
 }
 
 .reset_button{
-    background: #22333d;
+    background: #2f434e;
     border: none;
     color: rgb(252, 248, 248);
     width: 38px;
@@ -46,12 +46,21 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.logo{
-    height: 20px;
+    box-shadow: 0.5px 0.5px 0.2px rgba(0, 0, 0, 0.345);
+
+    transition: transform 0.15s ease-in-out;
 }
 
-.turn_sign{
+.reset_button:active{
+    transform: rotate(-90deg);
+}
+
+.logo{
+    height: 20px;
+    padding-top: 5px;
+}
+
+.turn_sign_logo{
     width: 10px;
     height: 10px;
 }
@@ -64,22 +73,39 @@ body{
 }
 
 .row{
-    width: 320px;
+    width: 100%;
     display: flex;
+    gap: 10px;
     align-items: center;
-    justify-content: space-between;
     margin: 5px 0px ;
 }
 
 .cell{
-    height: 100px;
-    width: 100px;
+    flex: 1;
+    aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #22333d;;
+    background-color: #22333d;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0.5px 0.5px 0.2px rgba(0, 0, 0, 0.345);
+
+    transition: transform 0.1s ease-in-out;
+}
+
+.cell:active{
+    transform: scale(0.95);
+}
+
+.img{
+    height: 40%;
+    width: 40%;
+    pointer-events: none;
+}
+
+.cell:hover{
+    background-color: #2f434e;
 }
 
 .scoreboard{
@@ -89,40 +115,95 @@ body{
     border-radius: 12px;
     text-align: center;
     margin: 10px 0px;
+    gap: 10px;
+}
+
+.scorecard_x,
+.scorecard_o,
+.scorecard_tie{
+    flex:1;
+    min-height:70px;
+    color : #1b2a33;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    box-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.345);
 }
 
 .scorecard_x{
     background-color: #2fd8c9;
-    height: 70px;
-    width: 100px;
-    color : #1b2a33;
-    border-radius: 10px;
-    letter-spacing: 0.5px;
-    line-height: 32px;
-    font-size: 15px;
-    font-weight: 700;
 }
 
 .scorecard_tie{
     background-color: #dfe8ea;
-    height: 70px;
-    width: 100px;
-    color : #1b2a33;
-    border-radius: 10px;
-    letter-spacing: 0.5px;
-    line-height: 32px;
-    font-size: 15px;
-    font-weight: 700;
 }
 
 .scorecard_o{
     background-color: #f0b429;
-    height: 70px;
-    width: 100px;
-    color : #1b2a33;
-    border-radius: 10px;
-    letter-spacing: 0.5px;
-    line-height: 32px;
-    font-size: 15px;
-    font-weight: 700;
+}
+
+.x_name,
+.tie_name,
+.o_name{
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.status-msg {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin: -4px 0 12px;
+    height: 14px
+}
+
+.winner_x{
+    border: 0.5px solid #2fd8c9;
+    box-shadow: 0 0 8px #2fd8c9;
+}
+
+.winner_o{
+    border: 0.5px solid #f0b429;
+    box-shadow: 0 0 8px #f0b429;
+}
+
+/* Tablet Layout */
+
+@media (max-width:768px){
+
+    .game{
+        width:min(92vw,360px);
+    }
+
+    .status-msg{
+        font-size:14px;
+    }
+}
+
+/* Mobile Layout */
+
+@media (max-width:480px){
+
+    .game{
+        width:95vw;
+    }
+
+    .turn_indicator{
+        padding:6px 10px;
+        font-size:12px;
+    }
+
+    .scorecard_x,
+    .scorecard_o,
+    .scorecard_tie{
+        font-size:18px;
+    }
+
+    .x_name,
+    .o_name,
+    .tie_name{
+        font-size:11px;
+    }
 }
