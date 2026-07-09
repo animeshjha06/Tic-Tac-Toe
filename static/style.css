@@ -104,9 +104,6 @@ body{
     pointer-events: none;
 }
 
-.cell:hover{
-    background-color: #2f434e;
-}
 
 .scoreboard{
     display: flex;
@@ -169,8 +166,15 @@ body{
     box-shadow: 0 0 8px #f0b429;
 }
 
-/* Tablet Layout */
+/* Hover will work only with mouse and trackpad */
+@media (hover:hover){
+    .cell:hover{
+        background-color: #2f434e;
+    }
+}
 
+
+/* Tablet Layout */
 @media (max-width:768px){
 
     .game{
@@ -183,7 +187,6 @@ body{
 }
 
 /* Mobile Layout */
-
 @media (max-width:480px){
 
     .game{
